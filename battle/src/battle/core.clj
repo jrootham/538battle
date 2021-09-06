@@ -28,7 +28,7 @@
 		(let [army (edn/read-string line)]
 			(if (validate castles squad-count army)
 				army
-				(println "Invalid army")
+				(println "Invalid army" army (reduce + army))
 			)
 		)
 	)
